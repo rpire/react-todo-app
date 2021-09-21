@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
-import Header from "./Header";
-import InputTodo from "./InputTodo";
-import TodosList from "./TodosList";
-import Navbar from "./Navbar";
-import About from "../pages/About";
-import NotMatch from "../pages/NotMatch";
+import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import Header from './Header';
+import InputTodo from './InputTodo';
+import TodosList from '/TodosList';
+import Navbar from './Navbar';
+import About from '../pages/About';
+import NotMatch from '../pages/NotMatch';
 
 const TodoContainer = () => {
   const getInitialTodos = () => {
-    const temp = localStorage.getItem("todos");
+    const temp = localStorage.getItem('todos');
     const defaultTodos = [
       {
         id: uuidv4(),
-        title: "Add your first todo",
+        title: 'Add your first todo',
         completed: false,
       },
     ];
@@ -25,8 +25,7 @@ const TodoContainer = () => {
   const [todos, setTodos] = useState(getInitialTodos());
 
   const handleChange = (id) => {
-    setTodos((prevState) =>
-      prevState.map((todo) => {
+    setTodos((prevState) => prevState.map((todo) => {
         if (todo.id === id) {
           return {
             ...todo,
@@ -34,8 +33,7 @@ const TodoContainer = () => {
           };
         }
         return todo;
-      })
-    );
+      }));
   };
 
   const delTodo = (id) => {
@@ -62,13 +60,13 @@ const TodoContainer = () => {
           };
         }
         return todo;
-      })
+      }),
     );
   };
 
   useEffect(() => {
     const temp = JSON.stringify(todos);
-    localStorage.setItem("todos", temp);
+    localStorage.setItem('todos', temp);
   }, [todos]);
 
   return (
