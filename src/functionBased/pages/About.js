@@ -18,7 +18,7 @@ const About = () => {
         <SinglePage />
       </Route>
     </div>
-  )
-}
+  );
+};
 
 export default About;
