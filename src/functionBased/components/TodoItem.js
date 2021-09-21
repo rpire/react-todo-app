@@ -70,7 +70,7 @@ const TodoItem = (props) => {
   );
 };
 
-TodoItem.protoTypes = {
+TodoItem.propTypes = {
   todo: PropTypes.instanceOf(Object).isRequired,
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
