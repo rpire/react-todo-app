@@ -9,7 +9,7 @@ const TodosList = (props) => {
     deleteTodoProps,
     setUpdate,
   } = props;
-  
+
   return (
     <ul>
       {todos.map((todo) => (
