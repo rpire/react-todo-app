@@ -72,9 +72,6 @@ const TodoItem = (props) => {
 
 TodoItem.propTypes = {
   todo: PropTypes.instanceOf(Object).isRequired,
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
   handleChangeProps: PropTypes.func.isRequired,
   deleteTodoProps: PropTypes.func.isRequired,
   setUpdate: PropTypes.func.isRequired,
