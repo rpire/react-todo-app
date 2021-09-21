@@ -7,7 +7,7 @@ const TodosList = (props) => {
     todos,
     handleChangeProps,
     deleteTodoProps,
-    setUpdate
+    setUpdate,
   } = props;
   return (
     <ul>
