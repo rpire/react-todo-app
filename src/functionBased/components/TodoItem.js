@@ -17,17 +17,17 @@ const TodoItem = (props) => {
   };
 
   const completedStyle = {
-    fontStyle: "italic",
-    color: "#595959",
+    fontStyle: 'italic',
+    color: '#595959',
     opacity: 0.4,
-    textDecoration: "line-through",
+    textDecoration: 'line-through',
   };
 
   const {
     todo,
     handleChangeProps,
     deleteTodoProps,
-    setUpdate
+    setUpdate,
   } = props;
   const { completed, id, title } = todo;
 
@@ -72,6 +72,11 @@ const TodoItem = (props) => {
 
 TodoItem.protoTypes = {
   todo: PropTypes.instanceOf(Object).isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
+  deleteTodoProps: PropTypes.func.isRequired,
   setUpdate: PropTypes.func.isRequired,
 };
 
